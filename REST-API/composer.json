@@ -1,0 +1,18 @@
+{
+    "name": "beryl/rest-api",
+    "authors": [
+        {
+            "name": "HOUESSOU Béryl",
+            "email": "beryl.houessou@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Configuration\\": "Configuration/",
+            "Exception\\": "Exception/",
+            "Api\\": "Api/",
+            "Class\\": "Class/"
+        }
+    }
+}
