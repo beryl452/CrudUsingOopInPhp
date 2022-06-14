@@ -77,4 +77,14 @@ class User implements CrudUserInterface
         $query->execute();
         return $query;
     }
+
+    public function deleteUser(int $idIn)
+    {
+        $this->id = htmlspecialchars(strip_tags($idIn));
+        $sql = "DELETE FROM " . $this->dataBaseTable . " WHERE id = :idUser";
+        $query = $this->connection->prepare($sql);
+        $query->bindParam(":idUser", $this->id);
+        $query->execute();
+        return $query;
+    }
 }

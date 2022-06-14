@@ -8,4 +8,5 @@ interface CrudUserInterface
     public function getUser(int $idIn);
     public function createUser(string $nameIn, string $emailIn, int $ageIn, string $passwordIn );
     public function updateUser(int $idIn, string $nameIn, string $emailIn, int $ageIn, string $passwordIn);
+    public function deleteUser(int $idIn);
 }
