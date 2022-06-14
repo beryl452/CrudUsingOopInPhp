@@ -16,8 +16,8 @@
     $user = new User( $database);
     $data = json_decode(file_get_contents("php://input"));
 
-    if($user->createUser(nameIn:$data->name, emailIn:$data->email, ageIn:$data->age, passwordIn:$data->password)){
-        echo 'User created successfully.';
+    if($user->UpdateUser(idIn:$data->id, nameIn:$data->name, emailIn:$data->email, ageIn:$data->age, passwordIn:$data->password)){
+        echo 'User update successfully.';
     } else{
-        echo 'User could not be created.';
+        echo 'User could not be update.';
     }

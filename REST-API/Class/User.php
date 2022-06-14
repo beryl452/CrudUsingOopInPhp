@@ -43,7 +43,8 @@ class User implements CrudUserInterface
         return $query;
     }
 
-    public function createUser(string $nameIn, string $emailIn, int $ageIn, string $passwordIn ){
+    public function createUser(string $nameIn, string $emailIn, int $ageIn, string $passwordIn)
+    {
         $this->name = htmlspecialchars(strip_tags($nameIn));
         $this->email = htmlspecialchars(strip_tags($emailIn));
         $this->age = htmlspecialchars(strip_tags($ageIn));
@@ -51,9 +52,28 @@ class User implements CrudUserInterface
 
         $this->password =  password_hash($this->password, PASSWORD_ARGON2ID);
 
-        $sql = "INSERT INTO `". $this->dataBaseTable . "`(`name`, `email`, `age`, `password`)" . " VALUES('" . 
-        $this->name . "', '" . $this->email . "', '" . $this->age . "', '" . $this->password . "')";
-        $query = $this->connection->prepare($sql); 
+        $sql = "INSERT INTO `" . $this->dataBaseTable . "`(`name`, `email`, `age`, `password`)" . " VALUES('" .
+            $this->name . "', '" . $this->email . "', '" . $this->age . "', '" . $this->password . "')";
+        $query = $this->connection->prepare($sql);
+        $query->execute();
+        return $query;
+    }
+
+    public function updateUser(int $idIn, string $nameIn, string $emailIn, int $ageIn, string $passwordIn)
+    {
+        $this->id = htmlspecialchars(strip_tags($idIn));
+        $this->name = htmlspecialchars(strip_tags($nameIn));
+        $this->email = htmlspecialchars(strip_tags($emailIn));
+        $this->age = htmlspecialchars(strip_tags($ageIn));
+        $this->password = htmlspecialchars(strip_tags($passwordIn));
+
+        $this->password =  password_hash($this->password, PASSWORD_ARGON2ID);
+
+        $sql = "UPDATE " . $this->dataBaseTable .
+            " SET " .
+            " name = '" . $this->name . "', email = '" . $this->email . "', age = " . $this->age . ", password = '" . $this->password .
+            "' WHERE " . "id = " . $this->id;
+        $query = $this->connection->prepare($sql);
         $query->execute();
         return $query;
     }
