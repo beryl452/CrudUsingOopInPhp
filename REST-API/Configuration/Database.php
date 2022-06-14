@@ -7,23 +7,25 @@ use Exception\FailedToLoginException;
 class Database
 {
     private $host = 'localhost';
-    private $dataBaseName = 'test';
+    private $dataBaseName = 'phpapidb';
     private $dataBaseUser = 'root';
     private $dataBasePassword = '';
-    private $charset = 'utf8';
-    private $dsn = '';
-    protected $connection;
+    private $dsn;
+    private $connection;
 
-    public function __construct()
+    public function __construct()   
     {
         try {
-
-            $this->dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dataBaseName . ";charset=" . $this->charset;
+            $this->dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dataBaseName;
             $this->connection = new \PDO($this->dsn, $this->dataBaseUser, $this->dataBasePassword);
-            $this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-
+            $this->connection -> exec("SET NAMES utf8");
+            $this->connection -> setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } catch (FailedToLoginException $e) {
-            echo "Error Message: " . $e->getMessage();
+            echo "Database could not be connected: " . $e->getMessage();
         }
+    }
+    public function getConnection()
+    {
+        return $this->connection;
     }
 }
