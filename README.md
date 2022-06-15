@@ -33,31 +33,4 @@
 
 
 ##  Hiérarchie des dossiers : 
-
---REST-API
---Des classes 
-- Crud.php 
-- Base 
-- Validation.php 
-
---css 
-- style.css 
-
---inc 
-- pied de page.php 
-- header.php 
-
---Interfaces 
-- CrudInterface.php 
-- ValidationInterface.php 
-
---utilitaire 
-- autoload.php 
-
---create.php (Créer un enregistrement) 
-
---delete.php (Supprimer l'enregistrement) 
-
---edit.php (Modifier l'enregistrement) 
-
---index.php (Lire l'enregistrement) 
+![Hiérarchie des dossiers](https://github.com/beryl452/CrudUsingOopInPhp/blob/main/REST-API/Screenshot/HierarchieDesDossiers.PNG)
