@@ -2,7 +2,7 @@
 
 namespace Configuration;
 
-use Exception\FailedToLoginException;
+use Class\Exception\FailedToLoginException;
 
 class Database
 {

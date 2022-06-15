@@ -1,5 +1,5 @@
 <?php
-namespace Exception;
+namespace Class\Exception;
 
 class FailedToLoginException extends \PDOException
 {

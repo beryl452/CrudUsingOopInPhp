@@ -1,7 +1,9 @@
 <?php
    
     require_once('../vendor/autoload.php');
-    
+
+    use Exception\EmptydataException;
+    use Exception\TypeAgeException;
     use Class\User;
     use Configuration\Database;
 
@@ -15,9 +17,30 @@
     $database = new Database();
     $user = new User( $database);
     $data = json_decode(file_get_contents("php://input"));
-
-    if($user->createUser(nameIn:$data->name, emailIn:$data->email, ageIn:$data->age, passwordIn:$data->password)){
-        echo 'User created successfully.';
-    } else{
-        echo 'User could not be created.';
+    try {
+        if (!isset($data->name) && !isset($data->email) && !isset($data->age) && !isset($data->password)) {
+            throw new EmptydataException();
+         }
+         else {
+            try{
+                if (!is_int($data->age)) {
+                    throw new TypeAgeException();
+                }
+                else {
+                    if($user->createUser(nameIn:$data->name, emailIn:$data->email, ageIn:$data->age, passwordIn:$data->password)){
+                        http_response_code(201);
+                        echo json_encode(array("message" => "User created"));
+                    } else{
+                        http_response_code(503);
+                        echo json_encode(array("message" => "User could not be created."));
+                    }                   
+                }
+            }
+            catch(TypeAgeException $e){
+                http_response_code(503);
+                echo json_encode(array("message" => $e->getMessage()));
+            }
+        }
+    } catch (EmptydataException $e) {
+        echo json_encode(array("message" => $e->getMessage()));
     }
