@@ -7,14 +7,14 @@
 
 ##  Manuel d'utilisation : 
   
--[ ] Besoin de télécharger ou de cloner le projet 
--[ ] Créer une base de données nommée **phpapidb** 
--[ ] Créez une table nommée **\`users\`** 
--[ ] Les requêtes de table sont données ci-dessous 
--[ ] Nécessité de mettre le nom d'utilisateur et le mot de passe mySQL dans le fichier `Configuration/database.php` 
--[ ] Et vous avez terminé ! 
--[ ] Allez simplement dans votre navigateur et écrivez localhost ! 
--[ ] Et oui, le plus important -- Vous devez installer Apache, PHP et MySQL sur votre ordinateur :)(Ps: J'utilise un environnement de développement :Laragon-wamp) 
+- [ ] Besoin de télécharger ou de cloner le projet 
+- [ ] Créer une base de données nommée **phpapidb** 
+- [ ] Créez une table nommée **\`users\`** 
+- [ ] Les requêtes de table sont données ci-dessous 
+- [ ] Nécessité de mettre le nom d'utilisateur et le mot de passe mySQL dans le fichier `Configuration/database.php` 
+- [ ] Et vous avez terminé ! 
+- [ ] Allez simplement dans votre navigateur et écrivez localhost ! 
+- [ ] Et oui, le plus important -- Vous devez installer Apache, PHP et MySQL sur votre ordinateur :)(Ps: J'utilise un environnement de développement :Laragon-wamp) 
 
 
 ##  Prérequis : 
