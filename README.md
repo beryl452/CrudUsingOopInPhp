@@ -52,5 +52,4 @@ Screenshot/ReadSingleUser.PNG)
 ![Mettre à jour un enregistrement d'utilisateur](https://github.com/beryl452/CrudUsingOopInPhp/blob/main/REST-API/Screenshot/UpdateUser.PNG)
 
 - [ ] Delete.php (http://localhost/CrudUsingOopInPhp/REST-API/Api/Delete.php)
-![Supprimer l'enregistrement d'un utilisateur](https://github.com/beryl452/CrudUsingOopInPhp/blob/main/
-REST-API/Screenshot/DeleteUser.PNG)
+![Supprimer l'enregistrement d'un utilisateur](https://github.com/beryl452/CrudUsingOopInPhp/blob/main/REST-API/Screenshot/DeleteUser.PNG)
