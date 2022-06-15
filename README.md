@@ -45,8 +45,7 @@ Ouvrons Postman et utilisons les URLs 👇🏾 cliquez sur le bouton Send pour v
 ![Lire les enregistrement d'utilisateur](https://github.com/beryl452/CrudUsingOopInPhp/blob/main/REST-API/Screenshot/ReadAllUsers.PNG)
 
 - [ ] Read.php (http://localhost/CrudUsingOopInPhp/REST-API/Api/Read.php)
-![Lire un enregistrement d'utilisateur](https://github.com/beryl452/CrudUsingOopInPhp/blob/main/REST-API/
-Screenshot/ReadSingleUser.PNG)
+![Lire un enregistrement d'utilisateur](https://github.com/beryl452/CrudUsingOopInPhp/blob/main/REST-API/Screenshot/ReadSingleUser.PNG)
 
 - [ ] Update.php (http://localhost/CrudUsingOopInPhp/REST-API/Api/Update.php)
 ![Mettre à jour un enregistrement d'utilisateur](https://github.com/beryl452/CrudUsingOopInPhp/blob/main/REST-API/Screenshot/UpdateUser.PNG)
