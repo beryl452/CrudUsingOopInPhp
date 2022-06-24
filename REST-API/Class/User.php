@@ -11,11 +11,11 @@ class User implements CrudUserInterface
 
     private $connection;
 
-    private int $idUser;
-    private string $nameUser;
-    private string $emailUser;
-    private int $ageUser;
-    private string $passwordUser;
+    private int $id;
+    private string $name;
+    private string $email;
+    private int $age;
+    private string $password;
 
 
     public function __construct(Database $connectionDataBase)
@@ -87,4 +87,18 @@ class User implements CrudUserInterface
         $query->execute();
         return $query;
     }
+// assert
+
+public function getidUser(){
+    return $this->id;
+}
+public function getnameUser(){
+    return $this->name;
+}
+public function getemailUser(){
+    return $this->email;
+}
+public function getageUser(){
+    return $this->age;
+}
 }

@@ -11,7 +11,8 @@
             "Configuration\\": "Configuration/",
             "Exception\\": "Exception/",
             "Api\\": "Api/",
-            "Class\\": "Class/"
+            "Class\\": "Class/",
+            "Test\\":"Test/"
         }
     },
     "require-dev": {
