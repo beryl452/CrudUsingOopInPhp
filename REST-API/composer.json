@@ -6,7 +6,6 @@
             "email": "beryl.houessou@gmail.com"
         }
     ],
-    "require": {},
     "autoload": {
         "psr-4": {
             "Configuration\\": "Configuration/",
@@ -14,5 +13,8 @@
             "Api\\": "Api/",
             "Class\\": "Class/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     }
 }
