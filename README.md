@@ -1,4 +1,4 @@
-#  Créer une API RESTful PHP 8 CRUD (Create, Read, Update , Delete) simple avec MySQL et PDO (PHP Data Objects) 
+#  Créer une API PHP 8 CRUD (Create, Read, Update , Delete) simple avec MySQL et PDO (PHP Data Objects) 
  
 ##   Détails du référentiel : 
 
